@@ -27,44 +27,43 @@ export default function FilterMoviesCard(props) {
   const classes = useStyles();
 
   const genres = [
-    {id: 1, name: "Animation"},
-    {id: 2, name: "Comedy"},
-    {id: 3, name: "Thriller"}
+    { id: 1, name: "Animation" },
+    { id: 2, name: "Comedy" },
+    { id: 3, name: "Thriller" }
   ]
-
   return (
     <>
-    <Card className={classes.root} variant="outlined">
-      <CardContent>
-        <Typography variant="h5" component="h1">
-          <SearchIcon fontSize="large" />
-          Filter the movies.
-        </Typography>
-        <TextField
-          className={classes.formControl}
-          id="filled-search"
-          label="Search field"
-          type="search"
-          variant="filled"
-        />
-        <FormControl className={classes.formControl}>
-          <InputLabel id="genre-label">Genre</InputLabel>
-          <Select
-            labelId="genre-label"
-            id="genre-select"
-          >
-            {genres.map((genre) => {
-              return (
-                <MenuItem key={genre.id} value={genre.id}>
-                  {genre.name}
-                </MenuItem>
-              );
-            })}
-          </Select>
-        </FormControl>
-      </CardContent>
-    </Card>
-    <Card className={classes.root} variant="outlined">
+      <Card className={classes.root} variant="outlined">
+        <CardContent>
+          <Typography variant="h5" component="h1">
+            <SearchIcon fontSize="large" />
+            Filter the movies.
+          </Typography>
+          <TextField
+            className={classes.formControl}
+            id="filled-search"
+            label="Search field"
+            type="search"
+            variant="filled"
+          />
+          <FormControl className={classes.formControl}>
+            <InputLabel id="genre-label">Genre</InputLabel>
+            <Select
+              labelId="genre-label"
+              id="genre-select"
+            >
+              {genres.map((genre) => {
+                return (
+                  <MenuItem key={genre.id} value={genre.id}>
+                    {genre.name}
+                  </MenuItem>
+                );
+              })}
+            </Select>
+          </FormControl>
+        </CardContent>
+      </Card>
+      <Card className={classes.root} variant="outlined">
         <CardContent>
           <Typography variant="h5" component="h1">
             <SearchIcon fontSize="large" />
@@ -72,6 +71,6 @@ export default function FilterMoviesCard(props) {
           </Typography>
         </CardContent>
       </Card>
-      </>
+    </>
   );
 }
