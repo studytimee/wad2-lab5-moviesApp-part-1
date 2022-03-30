@@ -95,6 +95,7 @@ const images = [
 
 const App = () => {
   return (
+      //<HomePage movies={movies} />
       <MovieDetailsPage movie={sample} images={images} />
   );
 };
